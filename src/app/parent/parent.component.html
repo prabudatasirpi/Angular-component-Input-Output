@@ -1,0 +1,10 @@
+<div id="datasirpi">
+    <h3 id="header-title" > Parent component</h3>
+    <input id="heder-input" type="text" [(ngModel)]="channelNameInParent">
+
+    <p id="header-p"> {{msgFromChild}} </p>
+    
+</div>
+<app-child [channelName]="channelNameInParent"  
+(sendMessageEmitter)="receiveMessage($event)" ></app-child>
+
